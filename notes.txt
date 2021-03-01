@@ -106,3 +106,15 @@ Angular Building Blocks
 Setup An Angular Application
     Angular CLI
     Node.js
+
+
+
+From the application folder
+    npm start
+
+Day-01 Assignment
+JavaScript Array Methods:
+    filter
+    map
+    reduce
+    forEach
