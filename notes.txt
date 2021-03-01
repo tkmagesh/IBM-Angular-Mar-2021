@@ -42,3 +42,67 @@ class FullTimeEmployee extends Employee{
 }
 
 http://es6-features.org
+
+
+TypeScript
+    JavaScript is loosely typed
+
+var x : number = 10;
+
+function add(x : number, y : number) : number {
+    return x + y;
+}
+
+add('sadfs',10)
+
+    |
+    |
+    V
+    tsc
+    |
+    |
+    V
+
+var x  = 10;
+
+function add(x , y )  {
+    return x + y;
+}
+
+interfaces
+enums
+Classes
+Arrow functions
+Generics
+Access Modifiers
+
+http://typescriptlang.org
+
+
+Angular Building Blocks
+    - Module
+        Registry of other application entities (Components, Directives, Pipes, Services & Modules)
+        There can be any number of modules in an application
+        There has to be a minimum of 1 module
+        Application intialization happens through a module
+        Dependency Injection is built in
+
+    - Component
+        Represents one minor UI concern of the application
+        Encapsulates Presntation(View) + Interaction Behavior(Controller) + State(Model)
+        Application is a composition of components
+        Components can communicate to each other (provided they are accessible)
+
+    - Directive
+        Low level DOM manipulation
+
+    - Pipe
+        Data transformation for presentation
+        Offers performance benefits 
+
+    - Service
+        Encapsulate NON UI responsibilities of the application
+
+Setup An Angular Application
+    Angular CLI
+    Node.js
