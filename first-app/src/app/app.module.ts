@@ -23,10 +23,10 @@ import { Calculator2Component } from './calculator2/calculator2.component';
 
   /* bootstrap - Root component(s)  */
   bootstrap: [
-    /* AppComponent,  */
-    GreeterComponent,
+    AppComponent, 
+   /*  GreeterComponent,
     CalculatorComponent,
-    Calculator2Component
+    Calculator2Component */
   ]
 })
 export class AppModule { }
