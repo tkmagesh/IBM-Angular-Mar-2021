@@ -6,6 +6,10 @@ export function subtract(x : number, y : number ) : number {
     return x - y;
 }
 
-function multiply(x : number, y : number) : number {
+export function multiply(x : number, y : number) : number {
     return x * y;
+}
+
+export function divide(x : number, y : number) : number {
+    return x / y;
 }
