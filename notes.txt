@@ -118,3 +118,31 @@ JavaScript Array Methods:
     map
     reduce
     forEach
+
+Creating a component
+    1. Create the files for the component (greeter)
+        /app
+            /greeter
+                greeter.component.ts
+                greeter.component.html
+                greeter.component.css
+
+    2. Write the component class (greeter.component.ts)
+
+        import { Component } from '@angular/core'
+        @Component({
+            selector : 'app-greeter',
+            templateUrl : 'greeter.component.html',
+            styleUrls : ['greeter.component.css']
+        })
+        export class GreeterComponent{
+            /* component state & behavior goes here */
+        }
+
+    3. Register the component in the app.module.ts
+        import { GreeterComponent } from './greeter/greeter.component'
+
+        @NgModule({
+            declarations : [..., GreeterComponent],
+            bootstrap : [..., GreeterComponent] //If we want the greeter component to be the root component
+        })
