@@ -1,3 +1,8 @@
 <h1>Angular App</h1>
 <hr>
-<app-greeter></app-greeter>
+<input type="button" value="Greeter" (click)="userChoice='greeter'">
+<input type="button" value="Calculator" (click)="userChoice='calculator'">
+<input type="button" value="Calculator-2" (click)="userChoice='calculator2'">
+<app-greeter *ngIf="userChoice==='greeter'"></app-greeter>
+<app-calculator *ngIf="userChoice==='calculator'"></app-calculator>
+<app-calculator2 *ngIf="userChoice==='calculator2'"></app-calculator2>
