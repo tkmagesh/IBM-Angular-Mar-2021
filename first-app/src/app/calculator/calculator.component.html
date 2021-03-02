@@ -1,0 +1,10 @@
+<h3>Calculator</h3>
+<hr>
+<input type="number" #txtN1>
+<input type="number" #txtN2>
+<br>
+<input type="button" value="Add" (click)="onAddClick(txtN1.value, txtN2.value)">
+<input type="button" value="Subtract" (click)="onSubtractClick(txtN1.value, txtN2.value)">
+<input type="button" value="Multiply" (click)="onMultiplyClick(txtN1.value, txtN2.value)">
+<input type="button" value="Divide" (click)="onDivideClick(txtN1.value, txtN2.value)">
+<div>{{result}}</div>
