@@ -95,6 +95,17 @@ Angular Building Blocks
 
     - Directive
         Low level DOM manipulation
+        2 types
+            attribute directive
+                - manipulates the attributes of existing dom nodes
+                - DO NOT change the structure of the DOM tree
+                - syntax : used with []
+                - ex: ngClass
+
+            structural directive
+                - CHANGES the structure of the DOM tree (by adding new dom nodes / removing existing dom nodes)
+                - syntax : used by prefixing with '*'
+                - ex: ngIf
 
     - Pipe
         Data transformation for presentation

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as calc from '../calculator/calculator';
+import { CalculatorService } from '../services/calculator';
 
 @Component({
   selector: 'app-calculator2',
@@ -21,7 +21,7 @@ export class Calculator2Component implements OnInit {
     this._n2 = parseInt(value)
   }
 
-  constructor() { }
+  constructor(private calc : CalculatorService) { }
 
   ngOnInit(): void {
   }
@@ -29,16 +29,16 @@ export class Calculator2Component implements OnInit {
   onCalculateClick(){
     switch(this.operator){
       case 'add' :
-        this.result = calc.add(this._n1, this._n2);
+        this.result = this.calc.add(this._n1, this._n2);
         break;
       case 'subtract' :
-        this.result = calc.subtract(this._n1, this._n2);
+        this.result = this.calc.subtract(this._n1, this._n2);
         break;
       case 'multiply' :
-        this.result = calc.multiply(this._n1, this._n2);
+        this.result = this.calc.multiply(this._n1, this._n2);
         break;
       case 'divide' :
-        this.result = calc.divide(this._n1, this._n2);
+        this.result = this.calc.divide(this._n1, this._n2);
         break;        
     }
   }

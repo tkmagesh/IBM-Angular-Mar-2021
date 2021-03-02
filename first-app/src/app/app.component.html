@@ -3,6 +3,17 @@
 <input type="button" value="Greeter" (click)="userChoice='greeter'">
 <input type="button" value="Calculator" (click)="userChoice='calculator'">
 <input type="button" value="Calculator-2" (click)="userChoice='calculator2'">
-<app-greeter *ngIf="userChoice==='greeter'"></app-greeter>
+<input type="button" value="Products" (click)="userChoice='products'">
+<!-- 
+    <app-greeter *ngIf="userChoice==='greeter'"></app-greeter>
 <app-calculator *ngIf="userChoice==='calculator'"></app-calculator>
 <app-calculator2 *ngIf="userChoice==='calculator2'"></app-calculator2>
+<app-products *ngIf="userChoice==='products'"></app-products> 
+-->
+<div [ngSwitch]="userChoice">
+    <app-greeter *ngSwitchCase="'greeter'"></app-greeter>
+    <app-calculator *ngSwitchCase="'calculator'"></app-calculator>
+    <app-calculator2 *ngSwitchCase="'calculator2'"></app-calculator2>
+    <app-products *ngSwitchCase="'products'"></app-products>
+    <div *ngSwitchDefault>Select an option</div>
+</div>
