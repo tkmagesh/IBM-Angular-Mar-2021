@@ -151,4 +151,10 @@ Creating a component (manual)
 
 Creating a component (using angular cli)
     In the terminal
-        ng generate component greeter
+        ng generate component greeter (OR) ng g c greeter
+
+
+ES6 Module
+    1. Anything defined in a file (JS/TS) is considered PRIVATE to that file
+    2. Any public entity has to be explicitly EXPORTED
+    3. Any public entity from another file has to be explicitly IMPORTED
