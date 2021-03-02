@@ -1,0 +1,16 @@
+<h3>Calculator-2</h3>
+<hr>
+<input type="number" (change)="n1 = $any($event.target).value">
+<select (change)="operator = $any($event.target).value">
+    <option value="">---Select---</option>
+    <option value="add">Add</option>
+    <option value="subtract">Subtract</option>
+    <option value="multiply">Multiply</option>
+    <option value="divide">Divide</option>
+</select>
+<input type="number" (change)="n2 = $any($event.target).value">
+<input type="button" value="Calculate" (click)="onCalculateClick()">
+<div *ngIf="result !== 0"
+    [ngClass]="{positive : result >= 0, negative : result < 0}">
+        {{result | currency:'INR'}}
+</div>
