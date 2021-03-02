@@ -119,7 +119,7 @@ JavaScript Array Methods:
     reduce
     forEach
 
-Creating a component
+Creating a component (manual)
     1. Create the files for the component (greeter)
         /app
             /greeter
@@ -146,3 +146,9 @@ Creating a component
             declarations : [..., GreeterComponent],
             bootstrap : [..., GreeterComponent] //If we want the greeter component to be the root component
         })
+
+    4. Update the index.html to include the newly created component (greeter)
+
+Creating a component (using angular cli)
+    In the terminal
+        ng generate component greeter
