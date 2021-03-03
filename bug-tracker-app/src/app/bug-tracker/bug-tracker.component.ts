@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Bug } from './models/bug';
+import { BugOperationsService } from './services/bugOperations.service';
 
 
 @Component({
@@ -10,12 +11,12 @@ import { Bug } from './models/bug';
 export class BugTrackerComponent implements OnInit {
 
   bugs : Bug[] = [];
-  private currentBugId : number = 0;
+ 
   public sortAttr : string = '';
   public sortDesc : boolean = false;
   public newBugName : string = '';
 
-  constructor() { }
+  constructor(private bugOperations : BugOperationsService) { }
 
   ngOnInit(): void {
     this.bugs.push({ id : 3, name : 'Data integrity checks failed', isClosed : true, createdAt : new Date()});
@@ -25,17 +26,12 @@ export class BugTrackerComponent implements OnInit {
   }
 
   onAddNewClick(){
-    const newBug : Bug = {
-      id : ++this.currentBugId,
-      name : this.newBugName,
-      isClosed : false,
-      createdAt : new Date()
-    };
+    const newBug = this.bugOperations.createNew(this.newBugName);
     this.bugs = [...this.bugs, newBug];
   }
 
   onBugNameClick(bugToToggle : Bug){
-   const toggledBug = { ...bugToToggle, isClosed : !bugToToggle.isClosed };
+   const toggledBug = this.bugOperations.toggle(bugToToggle);
    this.bugs = this.bugs.map(bug => bug.id === bugToToggle.id ? toggledBug : bug);
   }
 
