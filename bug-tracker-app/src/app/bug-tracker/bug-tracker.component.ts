@@ -26,4 +26,8 @@ export class BugTrackerComponent implements OnInit {
     };
     this.bugs.push(newBug);
   }
+
+  onBugNameClick(bugToToggle : Bug){
+    bugToToggle.isClosed = !bugToToggle.isClosed;
+  }
 }
