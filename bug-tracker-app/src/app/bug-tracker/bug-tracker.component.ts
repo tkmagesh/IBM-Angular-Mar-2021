@@ -13,7 +13,8 @@ export class BugTrackerComponent implements OnInit {
   private currentBugId : number = 0;
   public sortAttr : string = '';
   public sortDesc : boolean = false;
-  
+  public newBugName : string = '';
+
   constructor() { }
 
   ngOnInit(): void {
@@ -23,14 +24,14 @@ export class BugTrackerComponent implements OnInit {
     this.bugs.push({ id : 2, name : 'Server communication failure', isClosed : true, createdAt : new Date()});
   }
 
-  onAddNewClick(newBugName : string){
+  onAddNewClick(){
     const newBug : Bug = {
       id : ++this.currentBugId,
-      name : newBugName,
+      name : this.newBugName,
       isClosed : false,
       createdAt : new Date()
     };
-    this.bugs.push(newBug);
+    this.bugs = [...this.bugs, newBug];
   }
 
   onBugNameClick(bugToToggle : Bug){

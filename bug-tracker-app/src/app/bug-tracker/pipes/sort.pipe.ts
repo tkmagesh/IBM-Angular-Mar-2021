@@ -3,7 +3,8 @@ import { Pipe, PipeTransform } from "@angular/core";
 type Comparer = (item1: any, item2: any) => number;
 
 @Pipe({
-    name : 'sort'
+    name : 'sort',
+    pure : true
 })
 export class SortPipe implements PipeTransform{
     private getDescComparer(comparer : Comparer) : Comparer{
@@ -21,6 +22,7 @@ export class SortPipe implements PipeTransform{
         return comparer;
     }
     transform(list: any[], attrName: string, isDesc : boolean = false) : any[] {
+        console.log('sort.transform triggered');
         if (!list || !list.length || !attrName) return list;
         return list.sort(this.getComparer(attrName, isDesc));
     }
