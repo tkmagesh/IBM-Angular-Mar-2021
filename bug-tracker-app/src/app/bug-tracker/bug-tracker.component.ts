@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Bug } from './models/Bug';
+import { Bug } from './models/bug';
 
 
 @Component({
