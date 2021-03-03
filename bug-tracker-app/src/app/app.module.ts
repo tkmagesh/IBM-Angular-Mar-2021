@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BugTrackerComponent } from './bug-tracker/bug-tracker.component';
+import { SortPipe } from './bug-tracker/pipes/sort.pipe';
 
 import { TrimTextPipe } from './bug-tracker/pipes/trimText.pipe';
 
@@ -10,7 +11,8 @@ import { TrimTextPipe } from './bug-tracker/pipes/trimText.pipe';
   declarations: [
     AppComponent,
     BugTrackerComponent,
-    TrimTextPipe
+    TrimTextPipe,
+    SortPipe
   ],
   imports: [
     BrowserModule
