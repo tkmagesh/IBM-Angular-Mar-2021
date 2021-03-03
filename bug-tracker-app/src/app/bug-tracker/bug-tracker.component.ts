@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Bug } from './models/Bug';
+
 
 @Component({
   selector: 'app-bug-tracker',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BugTrackerComponent implements OnInit {
 
-  bugs : string[] = [];
+  bugs : Bug[] = [];
+  private currentBugId : number = 0;
 
   constructor() { }
 
@@ -15,6 +18,12 @@ export class BugTrackerComponent implements OnInit {
   }
 
   onAddNewClick(newBugName : string){
-    this.bugs.push(newBugName);
+    const newBug : Bug = {
+      id : ++this.currentBugId,
+      name : newBugName,
+      isClosed : false,
+      createdAt : new Date()
+    };
+    this.bugs.push(newBug);
   }
 }

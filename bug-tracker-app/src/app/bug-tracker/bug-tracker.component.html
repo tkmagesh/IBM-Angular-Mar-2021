@@ -21,8 +21,9 @@
 <section class="list">
     <ol>
         <li *ngFor="let bug of bugs">
-            <span class="bugname">{{bug}}</span>
-            <div class="datetime">[Created At]</div>
+            <span class="bugname">{{bug.name}}</span>
+            <div class="datetime">[ {{bug.createdAt}} ]</div>
+            <div>{{bug.isClosed}}</div>
             <input type="button" value="Remove">
         </li>
         <!-- <li>
