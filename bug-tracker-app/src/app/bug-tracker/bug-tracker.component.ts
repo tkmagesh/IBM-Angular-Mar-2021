@@ -10,7 +10,7 @@ import { BugOperationsService } from './services/bugOperations.service';
 })
 export class BugTrackerComponent implements OnInit {
 
-  bugs : Bug[] = [];
+  public bugs : Bug[] = [];
  
   public sortAttr : string = '';
   public sortDesc : boolean = false;
