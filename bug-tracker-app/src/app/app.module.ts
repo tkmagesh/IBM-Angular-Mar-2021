@@ -8,6 +8,7 @@ import { SortPipe } from './bug-tracker/pipes/sort.pipe';
 
 import { TrimTextPipe } from './bug-tracker/pipes/trimText.pipe';
 import { BugOperationsService } from './bug-tracker/services/bugOperations.service';
+import { BugStorageService } from './bug-tracker/services/bugStorage.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { BugOperationsService } from './bug-tracker/services/bugOperations.servi
     BrowserModule
   ],
   providers: [
-    BugOperationsService
+    BugOperationsService,
+    BugStorageService
   ],
   bootstrap: [AppComponent]
 })
