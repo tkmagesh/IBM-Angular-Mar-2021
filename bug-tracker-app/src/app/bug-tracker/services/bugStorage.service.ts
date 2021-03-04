@@ -25,6 +25,7 @@ export class BugStorageService{
                 const rawData = this.storage.getItem(key || ''),
                     bug = JSON.parse(rawData || '');
                 result.push(bug);
+                this.currentBugId = this.currentBugId > bug.id ? this.currentBugId : bug.id;
             }
         }
         return result;
