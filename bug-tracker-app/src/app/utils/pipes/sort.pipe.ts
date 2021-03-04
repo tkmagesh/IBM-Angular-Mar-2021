@@ -22,7 +22,6 @@ export class SortPipe implements PipeTransform{
         return comparer;
     }
     transform(list: any[], attrName: string, isDesc : boolean = false) : any[] {
-        console.log('sort.transform triggered');
         if (!list || !list.length || !attrName) return list;
         return list.sort(this.getComparer(attrName, isDesc));
     }
