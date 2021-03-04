@@ -14,7 +14,7 @@ export class BugStorageService{
     }
 
     remove(bug : Bug) : void {
-        this.storage.removeItem(bug.id.toString());
+        this.storage.removeItem(`bug-${bug.id}`);
     }
 
     getAll() : Bug[] {
