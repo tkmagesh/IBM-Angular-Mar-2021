@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BugTrackerComponent } from './bug-tracker/bug-tracker.component';
+import { BugEditComponent } from './bug-tracker/components/bug-edit.component';
 import { BugStatsComponent } from './bug-tracker/components/bug-stats.component';
 import { ClosedCountPipe } from './bug-tracker/pipes/closedCount.pipe';
 import { ElapsedPipe } from './bug-tracker/pipes/elapsed.pipe';
@@ -17,6 +18,7 @@ import { BugStorageService } from './bug-tracker/services/bugStorage.service';
     AppComponent,
     BugTrackerComponent,
     BugStatsComponent,
+    BugEditComponent,
     TrimTextPipe,
     SortPipe,
     ElapsedPipe,
