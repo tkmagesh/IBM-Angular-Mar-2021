@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { UtilsModule } from './utils/utils.module';
+import { HttpClientModule } from '@angular/common/http';
 
 /* Components */
 import { AppComponent } from './app.component';
@@ -28,6 +29,7 @@ import { BugStorageService } from './bug-tracker/services/bugStorage.service';
   imports: [
     BrowserModule,
     UtilsModule,
+    HttpClientModule
   ],
   providers: [
     BugOperationsService,
