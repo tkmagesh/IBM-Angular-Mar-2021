@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  bugServiceEndPoint : 'http://myapi.com/bugs'
 };

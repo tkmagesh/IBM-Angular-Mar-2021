@@ -19,18 +19,18 @@
       "createdAt": "2021-02-05T07:01:32.030Z"
     },
     {
-      "id": 7,
-      "name": "Bug is not toggled",
-      "isClosed": false,
-      "createdAt": "2021-03-05T07:37:01.290Z"
-    },
-    {
       "id": 8,
       "name": "Server communication failure",
       "isClosed": false,
       "createdAt": "2021-03-05T09:58:34.209Z",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur aliquam id pariatur ipsa expedita nesciunt doloribus facilis architecto quisquam totam veniam odio, minima, labore deleniti, neque nam quia amet eveniet.",
       "isActive": true
+    },
+    {
+      "id": 9,
+      "name": "Server not working",
+      "isClosed": false,
+      "createdAt": "2021-03-05T10:59:32.443Z"
     }
   ],
   "projects": [

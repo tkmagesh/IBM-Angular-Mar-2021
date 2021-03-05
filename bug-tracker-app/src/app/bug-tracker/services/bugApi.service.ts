@@ -1,6 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
+import { environment } from "src/environments/environment";
 import { Bug } from "../models/bug";
 
 @Injectable()
@@ -11,21 +12,21 @@ export class BugApiService{
 
     getAll() : Observable<Bug[]>{
         return this.httpClient
-            .get<Bug[]>('http://localhost:3000/bugs')
+            .get<Bug[]>(environment.bugServiceEndPoint)
     }
 
     save(bug : Bug) : Observable<Bug>{
         if (bug.id === 0){
             return this.httpClient
-                .post<Bug>('http://localhost:3000/bugs', bug)
+                .post<Bug>(environment.bugServiceEndPoint, bug)
         } else {
             return this.httpClient
-                .put<Bug>(`http://localhost:3000/bugs/${bug.id}`, bug)
+                .put<Bug>(`${environment.bugServiceEndPoint}/${bug.id}`, bug)
         }
     }
 
     remove(bug : Bug) : Observable<any>{
         return this.httpClient
-                .delete<Bug>(`http://localhost:3000/bugs/${bug.id}`)
+                .delete<Bug>(`${environment.bugServiceEndPoint}/${bug.id}`)
     }
 }
