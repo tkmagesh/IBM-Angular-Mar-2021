@@ -172,3 +172,104 @@ ES6 Module
 
 To use an external liberary (moment)
     ng add moment
+
+Handing Async Operations
+    1. Callbacks
+    2. Promises
+    3. Async Await
+    4. Observables
+
+
+Observable X Enumerable (Also called as generator in JS)
+    Enumerable (Lazy Iterable)
+
+var values = [3,1,5,2,4]
+for(var index=0, count = values.length; index < count; index++){
+    var value = values[index]
+}
+
+function getEvenNos(list){
+    var evenNos = [];
+    for(var idx=0, count = list.length; idx < count; idx++){
+        var no = list[idx];
+        if (no % 2 === 0){
+            evenNos.push(no)
+        }
+    }
+    return evenNos
+}
+
+function getEvenNos(list){
+    var evenNos = [];
+    var iter = list[Symbol.iterator]();
+    var next = iter.next();
+    while(next.done === false){
+        var value = next.value
+        if (value % 2 === 0){
+            evenNos.push(value)
+        }
+        next = iter.next()
+    }
+    return evenNos
+}
+
+function getEvenNos(list){
+    var evenNos = [];
+    for(let value of list){
+        if (value % 2 === 0)
+            evenNos.push(value);
+    }
+    return evenNos;
+}
+
+30 Developers
+    5 Years
+    From Bangalore
+    Specialized in Java
+
+3000 resumes
+    (have to 10 candidates to hire 1 suitable developer)
+
+For 30 developers -> 300 candidates to be interviewed
+
+Observable will get the data ONLY in future
+
+
+Event Driven Applications
+
+employee.dat
+id, name, salary, dob, doj.....
+
+Write a program that calculates the avg salary of the employees
+    var sum, count
+    open the file
+    while (!file.EOF){
+        read line
+        parse line
+        sum += salary
+        count++
+    }
+    avg = sum / count
+    print avg
+    close file
+
+Rx.NET (Reactive Extensions for .NET)
+    Can be used to build applications where 'the mouse is the database'
+Observable
+    filter
+    map
+    aggregation
+    etc
+
+
+Browser Based Applications
+    User Actions (keyboard, mouse) (stream)
+    Timers (stream)
+    Ajax (Singular)
+    Server Sent Events (stream)
+    Web Sockets (stream)
+
+json-server 
+    node module 
+    executed using npm
+    expose the data from a json file as restful endpoints
