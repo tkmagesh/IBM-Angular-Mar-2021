@@ -277,3 +277,29 @@ json-server
 
 Angular Server communication
     HttpClient (HttpClientModule - @angular/common/http)
+
+
+http://www.amazon.in
+http://www.amazon.in/electronics
+http://www.amazon.in/electronics/mobile-phones
+http://www.amazon.in/electronics/mobile-phones/google
+http://www.amazon.in/electronics/mobile-phones/google/pixel-5
+
+http://www.amazon.in/electronics/mobile-phones/google/pixel-5/reviews
+
+
+Lotus
+Lotus/Inbox
+Lotus/Inbox/projects
+Lotus/Inbox/projects/payroll-master
+Lotus/Inbox/projects/payroll-master/bugs
+Lotus/Inbox/projects/payroll-master/bugs/bug-101
+
+Every module of the application has to be directly 
+    accessible using unique urls
+
+http://myapp.com/products
+http://myapp.com/customers
+
+RouteGaurd
+    CanActivate
