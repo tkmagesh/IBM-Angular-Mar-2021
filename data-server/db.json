@@ -1,12 +1,6 @@
 {
   "bugs": [
     {
-      "id": 1,
-      "name": "Server communicaiton failure",
-      "isClosed": false,
-      "createdAt": "2020-12-11T08:52:54.021Z"
-    },
-    {
       "id": 3,
       "name": "Data integrity checks failed",
       "isClosed": false,
@@ -15,7 +9,7 @@
     {
       "id": 5,
       "name": "User actions not recognized",
-      "isClosed": false,
+      "isClosed": true,
       "createdAt": "2021-01-11T05:28:42.900Z"
     },
     {
@@ -23,6 +17,12 @@
       "name": "Application is not responding",
       "isClosed": false,
       "createdAt": "2021-02-05T07:01:32.030Z"
+    },
+    {
+      "id": 7,
+      "name": "Bug is not toggled",
+      "isClosed": false,
+      "createdAt": "2021-03-05T07:37:01.290Z"
     }
   ],
   "projects": [

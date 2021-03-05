@@ -273,3 +273,7 @@ json-server
     node module 
     executed using npm
     expose the data from a json file as restful endpoints
+    npx json-server db.json (run this command from the folder that has the file)
+
+Angular Server communication
+    HttpClient (HttpClientModule - @angular/common/http)
